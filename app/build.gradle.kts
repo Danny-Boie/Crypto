@@ -72,8 +72,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation(libs.hilt.android.v244)
+    kapt(libs.hilt.android.compiler.v244)
+    implementation(libs.androidx.navigation.compose)
+
+    // Dagger - Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    kapt(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
 }
 
 kapt {

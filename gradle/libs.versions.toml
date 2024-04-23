@@ -3,6 +3,8 @@ agp = "8.3.2"
 converterGson = "2.11.0"
 gson = "2.10.1"
 hiltAndroid = "2.51.1"
+hiltAndroidCompiler = "2.51.1"
+hiltAndroidVersion = "2.51.1"
 hiltCompiler = "1.2.0"
 hiltLifecycleViewmodel = "1.0.0-alpha03"
 kotlin = "1.9.0"
@@ -16,6 +18,8 @@ composeBom = "2024.04.01"
 okhttp = "5.0.0-alpha.3"
 retrofit = "2.11.0"
 retrofitVersion = "2.9.0"
+navigationCompose = "2.7.5"
+
 
 
 [libraries]
@@ -27,6 +31,8 @@ converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+hilt-android-compiler-v244 = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android-v244 = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -43,6 +49,11 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-v290 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+
+
 
 
 [plugins]

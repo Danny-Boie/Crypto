@@ -8,7 +8,9 @@ import com.boie.crypto.domain.use_case.get_coins.GetCoinsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import androidx.compose.runtime.State
+import androidx.lifecycle.viewModelScope
 import com.boie.crypto.core.Resource
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 
@@ -40,6 +42,6 @@ class CoinListViewModel @Inject constructor(
                     _state.value = CoinListState(isLoading = true)
                 }
             }
-        }
+        }.launchIn(viewModelScope)
     }
 }

@@ -9,9 +9,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import androidx.compose.runtime.State
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.viewModelScope
 import com.boie.crypto.core.Constants
 import com.boie.crypto.core.Resource
 import com.boie.crypto.domain.use_case.get_coin.GetCoinUseCase
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 
@@ -46,6 +48,6 @@ class CoinDetailViewModel @Inject constructor(
                     _state.value = CoinDetailState(isLoading = true)
                 }
             }
-        }
+        }.launchIn(viewModelScope)
     }
 }
